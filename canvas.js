@@ -75,7 +75,7 @@ function animate(time) {
   c.clearRect(0, 0, innerWidth, innerHeight);
   generateBackground();
 
-  let move = speed * delta;
+  let move = speed * delta * 60;
 
   if (keys["ArrowUp"] || keys["w"]) {
     y -= move;
