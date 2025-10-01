@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      canvas {
+        background-color: #c9cebd;
+      }
+
+      #instructions {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 189, 189, 0.75);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        font-family: "Comic Sans MS", sans-serif;
+        text-align: center;
+      }
+
+      #instructions h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #ff6b6b;
+      }
+
+      #instructions p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: #5a6981;
+      }
+
+      #instructions button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 10px;
+        background: #ffd6a5;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      #instructions button:hover {
+        transform: scale(1.05);
+        background: #ffb347;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="instructions">
+      <h2>How to Play</h2>
+      <p>Use W/A/S/D or arrow keys to move the ant <br> Reach the apple!</p>
+      <button id="startButton">Start Game</button>
+    </div>
+    <canvas> </canvas>
+
+    <script src="canvas.js"></script>
+
+    <script>
+      const instructions = document.getElementById("instructions");
+      const startButton = document.getElementById("startButton");
+
+      startButton.addEventListener("click", () => {
+        instructions.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
